@@ -16,7 +16,7 @@ triangleString = """
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 """
 splitTriangle = triangleString.split("\n")
-triagnleArray = []
+triangleArray = []
 
 for row in splitTriangle:
     if row == "":
@@ -29,25 +29,25 @@ for row in splitTriangle:
     for number in digits:
         arrayOfDigits.append(int(number))
 
-    triagnleArray.append(arrayOfDigits)
+    triangleArray.append(arrayOfDigits)
 
 #flip array
 triangleArray = triangleArray[::-1]
 
-countLength = len(TriangleArray) - 1
+countLength = len(triangleArray) - 1
 
 for row in range(0, countLength, 1):
     #in each row
-    rowLength = len(row) - 1
+    rowLength = len(triangleArray[row]) - 1
     for numberIndex in range(0,rowLength):
         rowAboveIndex = row + 1
         numberAboveIndex = numberIndex
 
-        currentNumber = triagnleArray[row][numberIndex]
-        nextNumber = 
+        currentNumber = triangleArray[row][numberIndex]
+        nextNumber = triangleArray[row][numberIndex + 1]
 
-        triagnleArray[rowAboveIndex][numberAboveIndex] += max()
-
+        triangleArray[rowAboveIndex][numberAboveIndex] += max(currentNumber , nextNumber)
+print(triangleArray)
 
 #reverse order
 #max between index and next index
