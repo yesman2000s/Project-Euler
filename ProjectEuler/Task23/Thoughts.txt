@@ -1,0 +1,18 @@
+Store all abundant numbers upto 28123 in an array
+As the largest positive integer that cannot be made of two abundant numbers is less than 28213, this is the limit of abundant we need to calculate too
+Once calculated all abundant numbers, go through every number upto the limit and check if there is a way of making the number from the sum. If there is 
+disregard it. Else add it to the total
+
+Getting the divisors for all the numbers was extremely inefficient.
+Improved the getDivisors function by:
+    Only going up to the square root of the number.
+    Getting the paired divisor by doing number / x 
+    Appending both to an array
+
+Finding all numbers <28134 that can be written as the sum of abundant numbers
+    Brute force
+        Check each digit with every other abundant number
+        Every value not checked is apart of the set of nubmers that cant be written as the sum of two abundant numbers.
+
+
+Works but inefficient. 
