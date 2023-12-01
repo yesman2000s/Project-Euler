@@ -1,0 +1,28 @@
+Getting all permuations in all orders of 0,1,2,3,4,5,6,7,8,9
+Total permuations = 3,628,800 -> 10! 
+
+Heaps algorithm to generate permuations
+
+--Psuedocode
+
+procedure generate(k : integer, A : array of any):
+    if k = 1 then
+        output(A)
+    else
+        // Generate permutations with k-th unaltered
+        // Initially k = length(A)
+        generate(k - 1, A)
+
+        // Generate permutations for k-th swapped with each k-1 initial
+        for i := 0; i < k-1; i += 1 do
+            // Swap choice dependent on parity of k (even or odd)
+            if k is even then
+                swap(A[i], A[k-1]) // zero-indexed, the k-th is at k-1
+            else
+                swap(A[0], A[k-1])
+            end if
+            generate(k - 1, A)
+        end for
+    end if
+
+crying. its now working.
