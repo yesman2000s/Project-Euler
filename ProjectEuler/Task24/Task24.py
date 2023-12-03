@@ -9,7 +9,7 @@ foundPermutations = []
 def generatePermutations(numbersList, length):
         if length == 1:
             # A permutation was found!!
-            print(numbersList)
+            #print(numbersList)
             foundPermutations.append(numbersList.copy())
         else:
             # Generate permutations with k-th unaltered
@@ -25,5 +25,8 @@ def generatePermutations(numbersList, length):
                     numbersList[0], numbersList[length-1] = numbersList[length-1], numbersList[0]
                 generatePermutations(numbersList, length - 1)
 
-generatePermutations([0,1,2],3)
-print(foundPermutations)
+generatePermutations([0,1,2,3,4,5,6,7,8,9],10)
+foundPermutations = sorted(foundPermutations)
+print(foundPermutations[1000001])
+print(foundPermutations[1000000])
+print(foundPermutations[999999])

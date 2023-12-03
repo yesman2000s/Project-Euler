@@ -33,3 +33,16 @@ algorithm is working. Work on storing all found permutations.
 Error was with swapping position of elements.
 
 New error: when appending a found permutation to "found permutations" array the array is appended incorrectly.
+
+Fixed by appending a copy of the table..? strange..
+
+
+Work on ordering all permutations
+Python can do it for you.
+
+Working out permutations for 10 digits is slow.
+10! -> 3628800 permutations to find and sort! python is slow
+
+2, 7, 8, 3, 9, 1, 5, 4, 6, 0 
+index 999,999.
+
