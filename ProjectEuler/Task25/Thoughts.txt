@@ -1,0 +1,3 @@
+While loop to keep finding fibboncai numbers until one with 1000 digits is found
+
+Keep track of index start at one
