@@ -26,3 +26,10 @@ procedure generate(k : integer, A : array of any):
     end if
 
 crying. its now working.
+he lied. this algorithm DOES NOT WORK! 
+
+
+algorithm is working. Work on storing all found permutations. 
+Error was with swapping position of elements.
+
+New error: when appending a found permutation to "found permutations" array the array is appended incorrectly.
