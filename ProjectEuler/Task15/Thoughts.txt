@@ -1,0 +1,8 @@
+[
+[1][1][1][1]
+[1][2][3][4]
+]
+
+All possible routes of getting to a place are the sum of the place aboce and to the left of it.
+All top row have only 1 path due to only being able to move right and down
+All first column have 1 path ^
