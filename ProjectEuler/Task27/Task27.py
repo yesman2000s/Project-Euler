@@ -1,36 +1,40 @@
 import math
 
+
 def checkPrime(number):
-    if number < 0:
+    if number <0:
         return False
-    for num in range(2,math.floor(math.sqrt(number))+1):
+    for num in range(2, math.isqrt(number) + 1):
         if number % num == 0:
             return False
     return True
 
-
-#returns an array of all consec. primes in the given quadratic
-def generateQuadratic(a,b):
-    if checkPrime(b) == False:
+# returns an array of all consecutive primes in the given quadratic
+def generateQuadratic(a, b):
+    if not checkPrime(b):
         return 0
     n = 0
-    while True: 
-        solution = (a * n**2) + (b*n) + b
-        n += 1
+    while True:
+        solution = ((n ** 2)) + (b * n) + b
         if checkPrime(solution):
-            continue
+            n += 1
         else:
             break
     return n
 
-longest = -1000
-products = []
 
-av = 0
-ab = 0
+longestChainLength = 0
+product = 0
 
-for a in range(-1000,1000):
-   for b in range(2,1001):
-       products.append(generateQuadratic(a,b))
+for a in range(-999, 1000):
+    for b in range(-999, 1001):  # b must be a prime number
+        if not checkPrime(b):
+            continue
+        solution = generateQuadratic(a,b)
+        if solution > longestChainLength:
+            longestChainLength = solution
+            product = a*b
 
-print(max(products))
+print(longestChainLength , product)
+
+
