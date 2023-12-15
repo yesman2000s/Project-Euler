@@ -15,7 +15,7 @@ def generateQuadratic(a, b):
         return 0
     n = 0
     while True:
-        solution = ((n ** 2)) + (b * n) + b
+        solution = ((n ** 2)) + (a * n) + b
         if checkPrime(solution):
             n += 1
         else:
@@ -27,7 +27,7 @@ longestChainLength = 0
 product = 0
 
 for a in range(-999, 1000):
-    for b in range(-999, 1001):  # b must be a prime number
+    for b in range(2, 1001):  # b must be a prime number
         if not checkPrime(b):
             continue
         solution = generateQuadratic(a,b)
