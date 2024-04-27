@@ -1,0 +1,5 @@
+A triangle is right angled if a^2 + b^2 = c^2
+
+try all whole digit combinations e.g. 1,1 1,2, 1,3 etc... to find a right angled triagnle.
+
+-find all triples first
